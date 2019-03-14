@@ -25,8 +25,23 @@ $.ajax({
     Authorization: "Bearer " + accessToken
   }
 }).then(function(response) {
-  console.log(response);
+  console.log(response.display_name);
+  h1 = $("<h1>");
+  h1.text("You are logged in as: " + response.display_name);
+  $("body").append(h1);
 });
+
+function playButton(album) {
+  var frame = $("<iframe>");
+  frame.attr("src", "https://open.spotify.com/embed/album/" + album);
+  frame.attr("width", "300");
+  frame.attr("height", "380");
+  frame.attr("frameborder", "0");
+  frame.attr("allowtransparency", "true");
+  frame.attr("allow", "encrypted-media");
+
+  $("body").append();
+}
 
 var apiURL =
   "https://accounts.spotify.com/authorize?response_type=code&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/";

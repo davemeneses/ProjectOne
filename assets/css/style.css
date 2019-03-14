@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+.sidenav {
+  background-color: darkorchid;
+}
+.container {
+}
+body {
+  background-color: blueviolet;
+}
+.sec1,
+.sec2,
+.sec3 {
+  background-color: whitesmoke;
+  height: 200px;
+  text-align: center;
+}
+.jumbotron {
+  /* width:980px; */
+  /* margin:auto; */
+}

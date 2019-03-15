@@ -30,13 +30,16 @@ $(document).ready(function() {
     database.ref().push({ results });
   }
 
-  //   document.write(
-  //     "Welcome to our visitors from " +
-  //       geoplugin_region() +
-  //       ", " +
-  //       geoplugin_countryName()
-  //   );
-  //var x = geoplugin_region();
+  //function for checking url sent from spotify
+
+  //   var x = geoplugin_region();
+  // var instance = M.Sidenav.getInstance(elem);
+  $(".sidenav").sidenav();
+  $(".dropdown-trigger").dropdown();
+  // $(".drag-target").on("mouseover", function() {
+  // instance.open();
+  // });
+
   var city = "";
   function getLocation() {
     if (x === "Illinois") {

@@ -32,6 +32,21 @@ getLocation();
 console.log("this is the city to plug in to api call", city);
 
 //function for checking url sent from spotify
+$(document).ready(function() {
+  playButton("1DFixLWuPkv3KT3TnV35m3");
+
+  $.ajax({
+    url: "https://api.spotify.com/v1/me",
+    headers: {
+      Authorization: "Bearer " + accessToken
+    }
+  }).then(function(response) {
+    console.log(response.display_name);
+    h1 = $("<h1>");
+    h1.text("You are logged in as: " + response.display_name);
+    $("#user-info").append(h1);
+  });
+});
 
 function GetURLParameter(sParam) {
   var sPageURL = window.location.hash;
@@ -52,14 +67,27 @@ var accessToken = GetURLParameter("#access_token");
 
 //ajax request using accessToken
 
-$.ajax({
-  url: "https://api.spotify.com/v1/me",
-  headers: {
-    Authorization: "Bearer " + accessToken
-  }
-}).then(function(response) {
-  console.log(response);
-});
+// $.ajax({
+//   url: "https://api.spotify.com/v1/me",
+//   headers: {
+// Authorization: "Bearer " + accessToken
+//   }
+// }).then(function(response) {
+//   console.log(response.display_name);
+//   h1 = $("<h1>");
+//   h1.text("You are logged in as: " + response.display_name);
+//   $("body").append(h1);
+// });
+
+function playButton(album) {
+  var frame =
+    "<iframe src='https://open.spotify.com/embed/album/" +
+    album +
+    "' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>";
+  $("#player").append(frame);
+
+  console.log(frame);
+}
 
 var apiURL =
   "https://accounts.spotify.com/authorize?response_type=code&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/";

@@ -2,20 +2,23 @@
   box-sizing: border-box;
 }
 .sidenav {
-  background-image: url('https://images.unsplash.com/photo-1502657877623-f66bf489d236?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+  background-image: url("https://images.unsplash.com/photo-1502657877623-f66bf489d236?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+  /* background-size: cover; */
 }
-.dropdown-content{
-
+.dropdown-content {
   border-radius: 20px;
 }
-.sidenav li>a{
-  color:white;
+.sidenav li > a {
+  color: white;
 }
-.dropdown-content{
-  color:black;
+.navHeight{
+  height:800px;
+}
+.dropdown-content {
+  color: black;
 }
 body {
-  background-color: blueviolet;
+  background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/204180/aceef6d078c24ad92392b0ad066af923f2f96012.jpg');
 }
 .sec1,
 .sec2,
@@ -23,11 +26,14 @@ body {
   background-color: whitesmoke;
   height: 200px;
   text-align: center;
+  margin-right: 10px;
 }
-li{
+
+li {
   border-radius: 15px;
 }
-.navHeight{
-  height:100%;
+.jumbotron{
+  background-color:white;
+  margin-bottom:20px;
 }
 

@@ -12,6 +12,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
   <!-- Compiled and minified CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -25,7 +26,7 @@
 <body>
   <div class="row">
     <div class="col s1 navHeight">
-      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">Hello Dave-kun</i></a>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">headset</i></a>
       <ul id="slide-out" class="sidenav">
         <li>
           <div class="user-view">
@@ -121,24 +122,26 @@
     <div class="col s11">
       <div class="content">
         <div class="jumbotron">
-          <h1 class="display-4">Project 1: The Dave Meneses Experience</h1>
+          <h1 class="display-4">Notes Of The Neighborhood</h1>
           <p class="lead">
             Grab a music playlist based on your location. Link your spotify and
             start listening now
           </p>
           <hr class="my-4" />
           <p>Smash that spotify button to grab that API boi</p>
-          <a class="btn btn-primary btn-lg" id="spotify-login"
-            href="https://accounts.spotify.com/authorize?response_type=code&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/"
+          <a class="btn btn-primary btn-lg pulse" id="spotify-login"
+            href="https://accounts.spotify.com/authorize?response_type=token&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/"
             role="button">Start Listening</a>
         </div>
       </div>
 
-      <div class="row">
-        <div id="player" class="col s1"></div>
-        <div class="col s3 sec2 push-s3">Album Cover</div>
-        <div id="user-info" class="col s3 sec3 push-s3">User Info</div>
-      </div>
+      <!-- <div class="row"> -->
+      <div id="player" class='content-box'></div>
+      <img class='content-box album'
+        src='https://www.adorama.com/alc/wp-content/uploads/2018/06/kanye-west-ye-album-cover-825x465.png'>
+
+      <div id="user-info" class='content-box'>User Info</div>
+      <!-- </div> -->
     </div>
   </div>
 

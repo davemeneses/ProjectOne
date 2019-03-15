@@ -4,12 +4,13 @@
 //       ", " +
 //       geoplugin_countryName()
 //   );
-var x = geoplugin_region();
+//var x = geoplugin_region();
 var city = "";
 function getLocation() {
   if (x === "Illinois") {
     //   alert("You are in " + x);
     city = "Chicago";
+    return "5GuZsOiVqJa2t82bX1kiwU";
   } else if (x === "Louisiana") {
     city = "New Orleans";
   } else if (x === "Tennessee") {
@@ -28,12 +29,14 @@ function getLocation() {
     city = "Los Angeles";
   }
 }
-getLocation();
 console.log("this is the city to plug in to api call", city);
 
 //function for checking url sent from spotify
 $(document).ready(function() {
-  playButton("1DFixLWuPkv3KT3TnV35m3");
+  //   var x = geoplugin_region();
+  var city = "";
+
+  playButton("5GuZsOiVqJa2t82bX1kiwU");
 
   $.ajax({
     url: "https://api.spotify.com/v1/me",
@@ -65,23 +68,9 @@ console.log(GetURLParameter("#access_token"));
 
 var accessToken = GetURLParameter("#access_token");
 
-//ajax request using accessToken
-
-// $.ajax({
-//   url: "https://api.spotify.com/v1/me",
-//   headers: {
-// Authorization: "Bearer " + accessToken
-//   }
-// }).then(function(response) {
-//   console.log(response.display_name);
-//   h1 = $("<h1>");
-//   h1.text("You are logged in as: " + response.display_name);
-//   $("body").append(h1);
-// });
-
 function playButton(album) {
   var frame =
-    "<iframe src='https://open.spotify.com/embed/album/" +
+    "<iframe src='https://open.spotify.com/embed/user/123572670/playlist/" +
     album +
     "' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>";
   $("#player").append(frame);

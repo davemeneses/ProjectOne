@@ -1,3 +1,18 @@
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBdJOVvHINtcpYSa6zgBIDEDOgHfIol2fo",
+  authDomain: "projectone-c2928.firebaseapp.com",
+  databaseURL: "https://projectone-c2928.firebaseio.com",
+  projectId: "projectone-c2928",
+  storageBucket: "projectone-c2928.appspot.com",
+  messagingSenderId: "967329805449"
+};
+firebase.initializeApp(config);
+
+console.log("This is my firebase!", firebase);
+
+var database = firebase.database();
+
 //   document.write(
 //     "Welcome to our visitors from " +
 //       geoplugin_region() +
@@ -80,3 +95,16 @@ function playButton(album) {
 
 var apiURL =
   "https://accounts.spotify.com/authorize?response_type=code&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/";
+
+//ajax request for geolocation via IP
+$(document).ready(function() {
+  var queryURL = "https://ipapi.co/json";
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    var results = response.region;
+    console.log(results); //to check on if ajax is working
+  });
+});

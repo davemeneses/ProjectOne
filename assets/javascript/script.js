@@ -16,6 +16,7 @@ function GetURLParameter(sParam) {
 console.log(GetURLParameter("#access_token"));
 
 var accessToken = GetURLParameter("#access_token");
+playButton("1DFixLWuPkv3KT3TnV35m3");
 
 //ajax request using accessToken
 
@@ -32,16 +33,16 @@ $.ajax({
 });
 
 function playButton(album) {
-  var frame = $("<iframe>");
-  frame.attr("src", "https://open.spotify.com/embed/album/" + album);
-  frame.attr("width", "300");
-  frame.attr("height", "380");
-  frame.attr("frameborder", "0");
-  frame.attr("allowtransparency", "true");
-  frame.attr("allow", "encrypted-media");
+  var frame =
+    "<iframe src='https://open.spotify.com/embed/album/'" +
+    album +
+    " width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>";
+  $("body").html("");
 
-  $("body").append();
+  console.log(frame);
 }
+
+playButton("1DFixLWuPkv3KT3TnV35m3");
 
 var apiURL =
   "https://accounts.spotify.com/authorize?response_type=code&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/";

@@ -2,9 +2,16 @@
   box-sizing: border-box;
 }
 .sidenav {
-  background-color: darkorchid;
+  background-image: url("https://images.unsplash.com/photo-1502657877623-f66bf489d236?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
 }
-.container {
+.dropdown-content {
+  border-radius: 20px;
+}
+.sidenav li > a {
+  color: white;
+}
+.dropdown-content {
+  color: black;
 }
 body {
   background-color: blueviolet;
@@ -16,7 +23,6 @@ body {
   height: 200px;
   text-align: center;
 }
-.jumbotron {
-  /* width:980px; */
-  /* margin:auto; */
+li {
+  border-radius: 15px;
 }

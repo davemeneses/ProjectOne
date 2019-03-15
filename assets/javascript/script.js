@@ -49,6 +49,13 @@ console.log("this is the city to plug in to api call", city);
 //function for checking url sent from spotify
 $(document).ready(function() {
   //   var x = geoplugin_region();
+  // var instance = M.Sidenav.getInstance(elem);
+  $(".sidenav").sidenav();
+  $(".dropdown-trigger").dropdown();
+  // $(".drag-target").on("mouseover", function() {
+  // instance.open();
+  // });
+
   var city = "";
 
   playButton("5GuZsOiVqJa2t82bX1kiwU");

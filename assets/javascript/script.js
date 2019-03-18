@@ -1,3 +1,4 @@
+var state = "";
 var city = "";
 
 $(document).ready(function() {
@@ -9,7 +10,7 @@ $(document).ready(function() {
   }).then(function(response) {
     results = response.region;
     console.log("THIS STUFF FROM IP APi", results);
-    city = results;
+    state = results;
     //to check on if ajax is working
     saveIP();
   });
@@ -42,27 +43,74 @@ $(document).ready(function() {
   // instance.open();
   // });
 
-  function getLocation() {
-    if (x === "Illinois") {
-      //   alert("You are in " + x);
+  function getLocation(x) {
+    if (
+      x === "Florida" ||
+      "Georgia" ||
+      "North Carolina" ||
+      "South Carolina" ||
+      "Virginia"
+    ) {
+      city = "Atlanta";
+      return "6ZtJ9VXyhcirG0Pusz97Xq";
+    } else if (
+      x === "Colorado" ||
+      "Kansas" ||
+      "New Mexico" ||
+      "Oklahoma" ||
+      "Texas" ||
+      "Utah"
+    ) {
+      city = "Austin";
+      return "6likNOy320ANw4EjVQoUL4";
+    } else if (x === "Illinois" || "Missouri" || "Wisconsin") {
       city = "Chicago";
       return "5GuZsOiVqJa2t82bX1kiwU";
-    } else if (x === "Louisiana") {
-      city = "New Orleans";
-    } else if (x === "Tennessee") {
-      city = "Nashville";
-    } else if (x === "Texas") {
-      city = "Austin";
-    } else if (x === "Georgia") {
-      city = "Atlanta";
-    } else if (x === "Detroit") {
-      city = "Michigan";
-    } else if (x === "New York") {
-      city = "New York";
-    } else if (x === "Minnesota") {
-      city = "Minneapolis";
-    } else if (x === "California") {
+    } else if (x === "Indiana" || "Michigan" || "Ohio" || "Pennsylvania") {
+      city = "Detroit";
+      return "3m5aCjKic5YLooE7veFhGG";
+    } else if (x === "Arizona" || "California" || "Hawaii" || "Nevada") {
       city = "Los Angeles";
+      return "7CvoQu1AWSekUC2S1sR5bg";
+    } else if (
+      x === "Iowa" ||
+      "Minnesota" ||
+      "Nebraska" ||
+      "North Dakota" ||
+      "South Dakota"
+    ) {
+      city = "Minneapolis";
+      return "0s8OOVjPlMzpZJV10RJ5yB";
+    } else if (x === "Arkansas" || "Kentucky" || "Tennessee") {
+      city = "Nashville";
+      return "2QyliShG3Uqhda6Rqseeye";
+    } else if (
+      x === "Connecticut" ||
+      "Delaware" ||
+      "Maine" ||
+      "Maryland" ||
+      "Massachusetts" ||
+      "New Hampshire" ||
+      "New Jersey" ||
+      "New York" ||
+      "Rhode Island" ||
+      "Vermont"
+    ) {
+      city = "New York";
+      return "2KCQ2ZViv9GsveEf56n1Z7";
+    } else if (x === "Alabama" || "Louisiana" || "Mississippi") {
+      city = "New Orleans";
+      return "2hQF8vOGHR5cmaNGr7fS8j";
+    } else if (
+      x === "Alaska" ||
+      "Idaho" ||
+      "Montana" ||
+      "Oregon" ||
+      "Washington" ||
+      "Wyoming"
+    ) {
+      city = "Seattle";
+      return "3r0qc4QEhbA25KVyECpbS7";
     }
   }
   console.log("this is the city to plug in to api call", city);
@@ -71,7 +119,7 @@ $(document).ready(function() {
   $(document).ready(function() {
     //   var x = geoplugin_region();
 
-    playButton("5GuZsOiVqJa2t82bX1kiwU");
+    playButton(getLocation(state));
 
     $.ajax({
       url: "https://api.spotify.com/v1/me",

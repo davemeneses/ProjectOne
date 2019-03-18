@@ -1,12 +1,12 @@
-$(document).ready(function () {
+$(document).ready(function() {
   var queryURL = "https://ipapi.co/json";
   var results;
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function (response) {
+  }).then(function(response) {
     results = response.region;
-    console.log("THIS STUFF FROM IP APi", results);
+    console.log("THIS STUFF FROM IP API", results);
     //to check on if ajax is working
     saveIP();
   });
@@ -66,23 +66,24 @@ $(document).ready(function () {
   console.log("this is the city to plug in to api call", city);
 
   //function for checking url sent from spotify
-  $(document).ready(function () {
-    //   var x = geoplugin_region();
-    var city = "";
+  // $(document).ready(function() {
+  //   var x = geoplugin_region();
+  var city = "";
 
-    playButton("5GuZsOiVqJa2t82bX1kiwU");
-
-    $.ajax({
-      url: "https://api.spotify.com/v1/me",
-      headers: {
-        Authorization: "Bearer " + accessToken
-      }
-    }).then(function (response) {
-      console.log(response.display_name);
-      h1 = $("<h1>");
-      h1.text("You are logged in as: " + response.display_name);
-      $("#user-info").append(h1);
-    });
+  playButton("5GuZsOiVqJa2t82bX1kiwU");
+  var accessToken = GetURLParameter("#access_token");
+  $.ajax({
+    url: "https://api.spotify.com/v1/me",
+    headers: {
+      Authorization: "Bearer " + accessToken
+    }
+  }).then(function(response) {
+    console.log("hello");
+    console.log(response.display_name);
+    var h3 = $("<h3>");
+    console.log("h3");
+    h3.text("You are logged in as: " + response.display_name);
+    $("#user-info").append(h3);
   });
 
   function GetURLParameter(sParam) {
@@ -100,7 +101,7 @@ $(document).ready(function () {
   //logs an access token sent from spotfiy
   console.log(GetURLParameter("#access_token"));
 
-  var accessToken = GetURLParameter("#access_token");
+  // var accessToken = GetURLParameter("#access_token");
 
   function playButton(album) {
     var frame =
@@ -114,4 +115,5 @@ $(document).ready(function () {
 
   var apiURL =
     "https://accounts.spotify.com/authorize?response_type=code&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/";
+  // });
 });

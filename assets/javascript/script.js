@@ -1,11 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var state = "";
   var city = "";
   var images = [];
-
   var queryURL = "https://ipapi.co/json";
   var results;
-
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBdJOVvHINtcpYSa6zgBIDEDOgHfIol2fo",
@@ -16,27 +14,22 @@ $(document).ready(function() {
     messagingSenderId: "967329805449"
   };
   firebase.initializeApp(config);
-
   console.log("This is my firebase!", firebase);
-
   var database = firebase.database();
   function saveIP() {
     database.ref().push({ results });
   }
-
   //function for checking url sent from spotify
-
   //   var x = geoplugin_region();
   // var instance = M.Sidenav.getInstance(elem);
+  $('.carousel').carousel();
   $(".sidenav").sidenav();
   $(".dropdown-trigger").dropdown();
   // $(".drag-target").on("mouseover", function() {
   // instance.open();
   // });
-
   function getLocation(x) {
     console.log("The getLocation is " + state);
-
     if (
       x === "Florida" ||
       x === "Georgia" ||
@@ -116,17 +109,14 @@ $(document).ready(function() {
       return "3r0qc4QEhbA25KVyECpbS7";
     }
   }
-
   function playButton(album) {
     var frame =
       "<iframe src='https://open.spotify.com/embed/user/123572670/playlist/" +
       album +
       "' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>";
     $("#player").append(frame);
-
     console.log(frame);
   }
-
   function GetURLParameter(sParam) {
     var sPageURL = window.location.hash;
     console.log(sPageURL);
@@ -138,39 +128,32 @@ $(document).ready(function() {
       }
     }
   }
-
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function(response) {
+  }).then(function (response) {
     results = response.region;
     console.log("THIS STUFF FROM IP APi", results);
     state = results;
     //to check on if ajax is working
     saveIP();
-
     console.log("this is the city to plug in to api call", city);
-
     //function for checking url sent from spotify
     // $(document).ready(function() {
     //   var x = geoplugin_region();
-
     playButton(getLocation(state));
-
     var accessToken = GetURLParameter("#access_token");
-
     $.ajax({
       url: "https://api.spotify.com/v1/me",
       headers: {
         Authorization: "Bearer " + accessToken
       }
-    }).then(function(response) {
+    }).then(function (response) {
       console.log(response);
       h3 = $("<h3>");
       h3.text("You are logged in as: " + response.display_name);
       $("#user-info").append(h3);
     });
-
     $.ajax({
       url:
         "https://api.spotify.com/v1/playlists/" +
@@ -180,21 +163,19 @@ $(document).ready(function() {
       headers: {
         Authorization: "Bearer " + accessToken
       }
-    }).then(function(response) {
+    }).then(function (response) {
       images = JSON.parse(response);
       console.log(images);
       console.log("pls work" + images[1]);
-
       console.log("Specific image url", images[1].url);
       console.log("Specific images", images[1]);
       $(".album").attr("src", images[1].url);
     });
     // });
-
     //logs an access token sent from spotfiy
     console.log(GetURLParameter("#access_token"));
   });
-
   var apiURL =
     "https://accounts.spotify.com/authorize?response_type=code&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/";
 });
+

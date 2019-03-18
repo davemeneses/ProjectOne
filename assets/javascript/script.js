@@ -1,12 +1,15 @@
-$(document).ready(function () {
+var city = "";
+
+$(document).ready(function() {
   var queryURL = "https://ipapi.co/json";
   var results;
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function (response) {
+  }).then(function(response) {
     results = response.region;
     console.log("THIS STUFF FROM IP APi", results);
+    city = results;
     //to check on if ajax is working
     saveIP();
   });
@@ -39,7 +42,6 @@ $(document).ready(function () {
   // instance.open();
   // });
 
-  var city = "";
   function getLocation() {
     if (x === "Illinois") {
       //   alert("You are in " + x);
@@ -66,9 +68,8 @@ $(document).ready(function () {
   console.log("this is the city to plug in to api call", city);
 
   //function for checking url sent from spotify
-  $(document).ready(function () {
+  $(document).ready(function() {
     //   var x = geoplugin_region();
-    var city = "";
 
     playButton("5GuZsOiVqJa2t82bX1kiwU");
 
@@ -77,7 +78,7 @@ $(document).ready(function () {
       headers: {
         Authorization: "Bearer " + accessToken
       }
-    }).then(function (response) {
+    }).then(function(response) {
       console.log(response.display_name);
       h1 = $("<h1>");
       h1.text("You are logged in as: " + response.display_name);

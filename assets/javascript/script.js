@@ -180,7 +180,8 @@ $(document).ready(function() {
         Authorization: "Bearer " + accessToken
       }
     }).then(function(response) {
-      console.log(response);
+      console.log(response[1].url);
+      console.log(response[1]);
       $(".album").attr("src", response[1].url);
     });
     // });

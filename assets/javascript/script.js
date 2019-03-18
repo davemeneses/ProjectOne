@@ -181,13 +181,13 @@ $(document).ready(function() {
         Authorization: "Bearer " + accessToken
       }
     }).then(function(response) {
-      images = response;
+      images = JSON.parse(response);
       console.log(images);
-      console.log(images[0]);
+      console.log(images[1]);
 
-      console.log("Specific image url", images[0].url);
-      console.log("Specific images", images[0]);
-      $(".album").attr("src", images[0].url);
+      console.log("Specific image url", images[1].url);
+      console.log("Specific images", images[1]);
+      $(".album").attr("src", images[1].url);
     });
     // });
 

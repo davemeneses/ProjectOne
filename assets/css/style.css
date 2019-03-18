@@ -62,3 +62,9 @@ li {
   /* font-size: 60px; */
   color: rgb(211, 180, 211);
 }
+body {
+  font-size: 2vw;
+}
+.display-4 {
+  font-size: 4vw;
+}

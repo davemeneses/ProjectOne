@@ -15,9 +15,7 @@ p {
   height: auto;
 }
 .sidenav {
-  background-image: url("https://images.unsplash.com/photo-1502657877623-f66bf489d236?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
-
-  /* background-size: cover; */
+  background-image: url("https://data.whicdn.com/images/188199737/original.gif");
 }
 .dropdown-content {
   border-radius: 20px;
@@ -36,7 +34,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  /* background-position: center; */
 }
 .sec1,
 .sec2,
@@ -57,8 +54,10 @@ li {
 .content-box {
   width: 300px;
   height: 200px;
-  background-color: teal;
+  /* background-color:teal; */
+  float: left;
   margin-right: 15px;
+  margin-left: 15px;
   text-align: center;
   float: left;
   display: inline-block;
@@ -73,11 +72,25 @@ li {
   /* font-size: 60px; */
   color: rgb(211, 180, 211);
 }
-body {
-  font-size: 2vw;
+#user-info {
+  font-size: 2vh;
+  height: 200px;
+  width: 200px;
+  color: black;
+  background-color: teal;
 }
-.display-4 {
-  font-size: 4vw;
+#player {
+  height: 380px;
+  width: 300px;
+}
+.content {
+  margin-left: 80px;
+}
+.boxcontent {
+  margin-left: 10%;
+}
+.carousel {
+  width: 40%;
 }
 
 h1 {
@@ -85,7 +98,8 @@ h1 {
   -webkit-text-stroke-color: black;
   -webkit-text-fill-color: gold;
 }
-#opaqueBackground {
+#instructions {
+  font-size: 3vh;
   background-color: white;
   opacity: 0.7;
 }

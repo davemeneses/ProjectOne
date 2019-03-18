@@ -11,9 +11,6 @@
 .sidenav li > a {
   color: white;
 }
-.navHeight{
-  height:800px;
-}
 .dropdown-content {
   color: black;
 }
@@ -42,6 +39,7 @@ li {
   background-color:teal;
   float:left;
   margin-right:15px;
+  margin-left:15px;
   text-align: center;
 }
 .album{
@@ -54,4 +52,12 @@ li {
   font-size:60px;
   color: rgb(211, 180, 211);
 }
-
+#user-info{
+  font-size: 10px;
+  height: 200px;
+  width:200px;
+}
+#player{
+  height:350px;
+  width:350px;
+}

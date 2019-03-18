@@ -79,9 +79,10 @@ $(document).ready(function () {
       }
     }).then(function (response) {
       console.log(response.display_name);
-      h1 = $("<h1>");
-      h1.text("You are logged in as: " + response.display_name);
-      $("#user-info").append(h1);
+      // div = $("<div>");
+      $('#user-info').text("You are logged in as: " + response.display_name);
+      // div.css("font-size", "14px");
+      // $("#user-info").append(div);
     });
   });
 

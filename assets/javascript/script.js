@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var state = "";
   var city = "";
+  var images = [];
 
   var queryURL = "https://ipapi.co/json";
   var results;
@@ -168,6 +169,25 @@ $(document).ready(function() {
       h3 = $("<h1>");
       h3.text("You are logged in as: " + response.display_name);
       $("#user-info").append(h3);
+    });
+
+    $.ajax({
+      url:
+        "https://api.spotify.com/v1/playlists/" +
+        getLocation(state) +
+        "/images",
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + accessToken
+      }
+    }).then(function(response) {
+      images = JSON.parse(response);
+      console.log(images);
+      console.log("pls work" + images[1]);
+
+      console.log("Specific image url", images[1].url);
+      console.log("Specific images", images[1]);
+      $(".album").attr("src", images[1].url);
     });
     // });
 

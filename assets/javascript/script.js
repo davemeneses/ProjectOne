@@ -1,3 +1,6 @@
+var state = "";
+var city = "";
+
 $(document).ready(function() {
   var queryURL = "https://ipapi.co/json";
   var results;
@@ -7,6 +10,7 @@ $(document).ready(function() {
   }).then(function(response) {
     results = response.region;
     console.log("THIS STUFF FROM IP APi", results);
+    state = results;
     //to check on if ajax is working
     saveIP();
   });
@@ -39,8 +43,7 @@ $(document).ready(function() {
   // instance.open();
   // });
 
-  var city = "";
-  function getLocation() {
+  function getLocation(x) {
     if (
       x === "Florida" ||
       "Georgia" ||
@@ -115,9 +118,8 @@ $(document).ready(function() {
   //function for checking url sent from spotify
   $(document).ready(function() {
     //   var x = geoplugin_region();
-    var city = "";
 
-    playButton("5GuZsOiVqJa2t82bX1kiwU");
+    playButton(getLocation(state));
 
     $.ajax({
       url: "https://api.spotify.com/v1/me",

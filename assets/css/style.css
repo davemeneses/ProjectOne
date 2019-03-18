@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
 }
+p {
+  color: black;
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: gold; */
+}
 #logo-header {
   font-family: "Rock Salt", cursive;
 }
@@ -30,10 +36,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-<<<<<<< HEAD
-=======
   /* background-position: center; */
->>>>>>> master
 }
 .sec1,
 .sec2,
@@ -75,4 +78,14 @@ body {
 }
 .display-4 {
   font-size: 4vw;
+}
+
+h1 {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: gold;
+}
+#opaqueBackground {
+  background-color: white;
+  opacity: 0.7;
 }

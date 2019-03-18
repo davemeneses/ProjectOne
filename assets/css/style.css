@@ -1,9 +1,16 @@
 * {
   box-sizing: border-box;
+  align-content: center;
+}
+#logo-header {
+  font-family: "Rock Salt", cursive;
+}
+#img-resize {
+  max-width: 100%;
+  height: auto;
 }
 .sidenav {
-  background-image: url("https://images.unsplash.com/photo-1502657877623-f66bf489d236?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
-  /* background-size: cover; */
+  background-image: url("https://data.whicdn.com/images/188199737/original.gif");
 }
 .dropdown-content {
   border-radius: 20px;
@@ -11,11 +18,17 @@
 .sidenav li > a {
   color: white;
 }
+.navHeight {
+  height: 800px;
+}
 .dropdown-content {
   color: black;
 }
 body {
-  background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/204180/aceef6d078c24ad92392b0ad066af923f2f96012.jpg');
+  background-image: url("https://i.pinimg.com/originals/e9/89/61/e9896186f55021eeb4a5f39fea811124.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .sec1,
 .sec2,
@@ -29,9 +42,9 @@ body {
 li {
   border-radius: 15px;
 }
-.jumbotron{
-  color:white;
-  margin-bottom:20px;
+.jumbotron {
+  color: white;
+  margin-bottom: 20px;
 }
 .content-box{
   width:300px;
@@ -42,14 +55,14 @@ li {
   margin-left:15px;
   text-align: center;
 }
-.album{
-  background-image: url('https://www.adorama.com/alc/wp-content/uploads/2018/06/kanye-west-ye-album-cover-825x465.png');
+.album {
+  background-image: url("https://www.adorama.com/alc/wp-content/uploads/2018/06/kanye-west-ye-album-cover-825x465.png");
 }
-#spotify-login{
-  margin-top:10px;
+#spotify-login {
+  margin-top: 10px;
 }
-.material-icons{
-  font-size:60px;
+.material-icons {
+  /* font-size: 60px; */
   color: rgb(211, 180, 211);
 }
 #user-info{

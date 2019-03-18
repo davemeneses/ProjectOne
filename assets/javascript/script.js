@@ -181,8 +181,9 @@ $(document).ready(function() {
         Authorization: "Bearer " + accessToken
       }
     }).then(function(response) {
-      images = response;
+      images = JSON.parse(response);
       console.log(images);
+      console.log("pls work" + images[1]);
 
       console.log("Specific image url", images[1].url);
       console.log("Specific images", images[1]);

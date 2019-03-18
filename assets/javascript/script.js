@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   var state = "";
   var city = "";
   var images = [];
@@ -22,7 +22,7 @@ $(document).ready(function () {
   //function for checking url sent from spotify
   //   var x = geoplugin_region();
   // var instance = M.Sidenav.getInstance(elem);
-  $('.carousel').carousel();
+  $(".carousel").carousel();
   $(".sidenav").sidenav();
   $(".dropdown-trigger").dropdown();
   // $(".drag-target").on("mouseover", function() {
@@ -131,7 +131,7 @@ $(document).ready(function () {
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function (response) {
+  }).then(function(response) {
     results = response.region;
     console.log("THIS STUFF FROM IP APi", results);
     state = results;
@@ -148,11 +148,11 @@ $(document).ready(function () {
       headers: {
         Authorization: "Bearer " + accessToken
       }
-    }).then(function (response) {
+    }).then(function(response) {
       console.log(response);
-      h3 = $("<h3>");
-      h3.text("You are logged in as: " + response.display_name);
-      $("#user-info").append(h3);
+      h6 = $("<h6>");
+      h6.text("You are logged in as: " + response.display_name);
+      $("#user-info").append(h6);
     });
     $.ajax({
       url:
@@ -163,7 +163,7 @@ $(document).ready(function () {
       headers: {
         Authorization: "Bearer " + accessToken
       }
-    }).then(function (response) {
+    }).then(function(response) {
       images = JSON.parse(response);
       console.log(images);
       console.log("pls work" + images[1]);
@@ -178,4 +178,3 @@ $(document).ready(function () {
   var apiURL =
     "https://accounts.spotify.com/authorize?response_type=code&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/";
 });
-

@@ -1,19 +1,9 @@
-var state = "";
-var city = "";
-
 $(document).ready(function() {
+  var state = "";
+  var city = "";
+
   var queryURL = "https://ipapi.co/json";
   var results;
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
-    results = response.region;
-    console.log("THIS STUFF FROM IP APi", results);
-    state = results;
-    //to check on if ajax is working
-    saveIP();
-  });
 
   // Initialize Firebase
   var config = {
@@ -44,97 +34,97 @@ $(document).ready(function() {
   // });
 
   function getLocation(x) {
+    console.log("The getLocation is " + state);
+
     if (
       x === "Florida" ||
-      "Georgia" ||
-      "North Carolina" ||
-      "South Carolina" ||
-      "Virginia"
+      x === "Georgia" ||
+      x === "North Carolina" ||
+      x === "South Carolina" ||
+      x === "Virginia"
     ) {
       city = "Atlanta";
       return "6ZtJ9VXyhcirG0Pusz97Xq";
     } else if (
       x === "Colorado" ||
-      "Kansas" ||
-      "New Mexico" ||
-      "Oklahoma" ||
-      "Texas" ||
-      "Utah"
+      x === "Kansas" ||
+      x === "New Mexico" ||
+      x === "Oklahoma" ||
+      x === "Texas" ||
+      x === "Utah"
     ) {
       city = "Austin";
       return "6likNOy320ANw4EjVQoUL4";
-    } else if (x === "Illinois" || "Missouri" || "Wisconsin") {
+    } else if (x === "Illinois" || x === "Missouri" || x === "Wisconsin") {
       city = "Chicago";
       return "5GuZsOiVqJa2t82bX1kiwU";
-    } else if (x === "Indiana" || "Michigan" || "Ohio" || "Pennsylvania") {
+    } else if (
+      x === "Indiana" ||
+      x === "Michigan" ||
+      x === "Ohio" ||
+      x === "Pennsylvania"
+    ) {
       city = "Detroit";
       return "3m5aCjKic5YLooE7veFhGG";
-    } else if (x === "Arizona" || "California" || "Hawaii" || "Nevada") {
+    } else if (
+      x === "Arizona" ||
+      x === "California" ||
+      x === "Hawaii" ||
+      x === "Nevada"
+    ) {
       city = "Los Angeles";
       return "7CvoQu1AWSekUC2S1sR5bg";
     } else if (
       x === "Iowa" ||
-      "Minnesota" ||
-      "Nebraska" ||
-      "North Dakota" ||
-      "South Dakota"
+      x === "Minnesota" ||
+      x === "Nebraska" ||
+      x === "North Dakota" ||
+      x === "South Dakota"
     ) {
       city = "Minneapolis";
       return "0s8OOVjPlMzpZJV10RJ5yB";
-    } else if (x === "Arkansas" || "Kentucky" || "Tennessee") {
+    } else if (x === "Arkansas" || x === "Kentucky" || x === "Tennessee") {
       city = "Nashville";
       return "2QyliShG3Uqhda6Rqseeye";
     } else if (
       x === "Connecticut" ||
-      "Delaware" ||
-      "Maine" ||
-      "Maryland" ||
-      "Massachusetts" ||
-      "New Hampshire" ||
-      "New Jersey" ||
-      "New York" ||
-      "Rhode Island" ||
-      "Vermont"
+      x === "Delaware" ||
+      x === "Maine" ||
+      x === "Maryland" ||
+      x === "Massachusetts" ||
+      x === "New Hampshire" ||
+      x === "New Jersey" ||
+      x === "New York" ||
+      x === "Rhode Island" ||
+      x === "Vermont"
     ) {
       city = "New York";
       return "2KCQ2ZViv9GsveEf56n1Z7";
-    } else if (x === "Alabama" || "Louisiana" || "Mississippi") {
+    } else if (x === "Alabama" || x === "Louisiana" || x === "Mississippi") {
       city = "New Orleans";
       return "2hQF8vOGHR5cmaNGr7fS8j";
     } else if (
       x === "Alaska" ||
-      "Idaho" ||
-      "Montana" ||
-      "Oregon" ||
-      "Washington" ||
-      "Wyoming"
+      x === "Idaho" ||
+      x === "Montana" ||
+      x === "Oregon" ||
+      x === "Washington" ||
+      x === "Wyoming"
     ) {
       city = "Seattle";
       return "3r0qc4QEhbA25KVyECpbS7";
     }
   }
-  console.log("this is the city to plug in to api call", city);
 
-  //function for checking url sent from spotify
-  // $(document).ready(function() {
-  //   var x = geoplugin_region();
-  var city = "";
+  function playButton(album) {
+    var frame =
+      "<iframe src='https://open.spotify.com/embed/user/123572670/playlist/" +
+      album +
+      "' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>";
+    $("#player").append(frame);
 
-  playButton("5GuZsOiVqJa2t82bX1kiwU");
-  var accessToken = GetURLParameter("#access_token");
-  $.ajax({
-    url: "https://api.spotify.com/v1/me",
-    headers: {
-      Authorization: "Bearer " + accessToken
-    }
-  }).then(function(response) {
-    console.log("hello");
-    console.log(response.display_name);
-    var h3 = $("<h3>");
-    console.log("h3");
-    h3.text("You are logged in as: " + response.display_name);
-    $("#user-info").append(h3);
-  });
+    console.log(frame);
+  }
 
   function GetURLParameter(sParam) {
     var sPageURL = window.location.hash;
@@ -148,20 +138,42 @@ $(document).ready(function() {
     }
   }
 
-  //logs an access token sent from spotfiy
-  console.log(GetURLParameter("#access_token"));
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    results = response.region;
+    console.log("THIS STUFF FROM IP APi", results);
+    state = results;
+    //to check on if ajax is working
+    saveIP();
 
-  // var accessToken = GetURLParameter("#access_token");
+    console.log("this is the city to plug in to api call", city);
 
-  function playButton(album) {
-    var frame =
-      "<iframe src='https://open.spotify.com/embed/user/123572670/playlist/" +
-      album +
-      "' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>";
-    $("#player").append(frame);
+    //function for checking url sent from spotify
+    // $(document).ready(function() {
+    //   var x = geoplugin_region();
 
-    console.log(frame);
-  }
+    playButton(getLocation(state));
+
+    var accessToken = GetURLParameter("#access_token");
+
+    $.ajax({
+      url: "https://api.spotify.com/v1/me",
+      headers: {
+        Authorization: "Bearer " + accessToken
+      }
+    }).then(function(response) {
+      console.log(response.display_name);
+      h3 = $("<h1>");
+      h3.text("You are logged in as: " + response.display_name);
+      $("#user-info").append(h3);
+    });
+    // });
+
+    //logs an access token sent from spotfiy
+    console.log(GetURLParameter("#access_token"));
+  });
 
   var apiURL =
     "https://accounts.spotify.com/authorize?response_type=code&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/";

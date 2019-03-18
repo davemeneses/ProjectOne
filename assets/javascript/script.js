@@ -183,7 +183,7 @@ $(document).ready(function() {
     }).then(function(response) {
       images = JSON.parse(response);
       console.log(images);
-      console.log(images[1]);
+      console.log("pls work" + images[1]);
 
       console.log("Specific image url", images[1].url);
       console.log("Specific images", images[1]);

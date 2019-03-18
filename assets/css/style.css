@@ -36,7 +36,7 @@ li {
 .content-box{
   width:300px;
   height:200px;
-  background-color:teal;
+  /* background-color:teal; */
   float:left;
   margin-right:15px;
   margin-left:15px;
@@ -56,8 +56,19 @@ li {
   font-size: 10px;
   height: 200px;
   width:200px;
+  color:black;
+  background-color:green;
 }
 #player{
-  height:350px;
-  width:350px;
+  height:380px;
+  width:300px;
+}
+.content{
+  margin-left:80px;
+}
+.boxcontent{
+  margin-left:10%;
+}
+.carousel{
+  width:40%;
 }

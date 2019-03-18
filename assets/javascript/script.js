@@ -116,22 +116,24 @@ $(document).ready(function() {
   console.log("this is the city to plug in to api call", city);
 
   //function for checking url sent from spotify
-  $(document).ready(function() {
-    //   var x = geoplugin_region();
+  // $(document).ready(function() {
+  //   var x = geoplugin_region();
+  var city = "";
 
-    playButton(getLocation(state));
-
-    $.ajax({
-      url: "https://api.spotify.com/v1/me",
-      headers: {
-        Authorization: "Bearer " + accessToken
-      }
-    }).then(function(response) {
-      console.log(response.display_name);
-      h1 = $("<h1>");
-      h1.text("You are logged in as: " + response.display_name);
-      $("#user-info").append(h1);
-    });
+  playButton("5GuZsOiVqJa2t82bX1kiwU");
+  var accessToken = GetURLParameter("#access_token");
+  $.ajax({
+    url: "https://api.spotify.com/v1/me",
+    headers: {
+      Authorization: "Bearer " + accessToken
+    }
+  }).then(function(response) {
+    console.log("hello");
+    console.log(response.display_name);
+    var h3 = $("<h3>");
+    console.log("h3");
+    h3.text("You are logged in as: " + response.display_name);
+    $("#user-info").append(h3);
   });
 
   function GetURLParameter(sParam) {
@@ -149,7 +151,7 @@ $(document).ready(function() {
   //logs an access token sent from spotfiy
   console.log(GetURLParameter("#access_token"));
 
-  var accessToken = GetURLParameter("#access_token");
+  // var accessToken = GetURLParameter("#access_token");
 
   function playButton(album) {
     var frame =

@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  align-content: center;
+}
+#logo-header {
+  font-family: "Rock Salt", cursive;
 }
 .sidenav {
   background-image: url("https://images.unsplash.com/photo-1502657877623-f66bf489d236?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
@@ -11,14 +15,14 @@
 .sidenav li > a {
   color: white;
 }
-.navHeight{
-  height:800px;
+.navHeight {
+  height: 800px;
 }
 .dropdown-content {
   color: black;
 }
 body {
-  background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/204180/aceef6d078c24ad92392b0ad066af923f2f96012.jpg');
+  background-image: url("https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/204180/aceef6d078c24ad92392b0ad066af923f2f96012.jpg");
 }
 .sec1,
 .sec2,
@@ -32,26 +36,25 @@ body {
 li {
   border-radius: 15px;
 }
-.jumbotron{
-  color:white;
-  margin-bottom:20px;
+.jumbotron {
+  color: white;
+  margin-bottom: 20px;
 }
-.content-box{
-  width:300px;
-  height:200px;
-  background-color:teal;
-  float:left;
-  margin-right:15px;
+.content-box {
+  width: 300px;
+  height: 200px;
+  background-color: teal;
+  float: left;
+  margin-right: 15px;
   text-align: center;
 }
-.album{
-  background-image: url('https://www.adorama.com/alc/wp-content/uploads/2018/06/kanye-west-ye-album-cover-825x465.png');
+.album {
+  background-image: url("https://www.adorama.com/alc/wp-content/uploads/2018/06/kanye-west-ye-album-cover-825x465.png");
 }
-#spotify-login{
-  margin-top:10px;
+#spotify-login {
+  margin-top: 10px;
 }
-.material-icons{
-  font-size:60px;
+.material-icons {
+  font-size: 60px;
   color: rgb(211, 180, 211);
 }
-

@@ -181,7 +181,7 @@ $(document).ready(function() {
       }
     }).then(function(response) {
       console.log(response);
-      $(".album").attr("src", response);
+      $(".album").attr("src", response[1].url);
     });
     // });
 

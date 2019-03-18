@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var state = "";
   var city = "";
+  var images = [];
 
   var queryURL = "https://ipapi.co/json";
   var results;
@@ -180,10 +181,12 @@ $(document).ready(function() {
         Authorization: "Bearer " + accessToken
       }
     }).then(function(response) {
-      console.log("Images", response);
-      console.log("Specific image url", response[1].url);
-      console.log("Specific images", response[1]);
-      $(".album").attr("src", response[1].url);
+      images = response;
+      console.log(images);
+
+      console.log("Specific image url", images[1].url);
+      console.log("Specific images", images[1]);
+      $(".album").attr("src", images[1].url);
     });
     // });
 

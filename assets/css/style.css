@@ -5,8 +5,13 @@
 #logo-header {
   font-family: "Rock Salt", cursive;
 }
+#img-resize {
+  max-width: 100%;
+  height: auto;
+}
 .sidenav {
   background-image: url("https://images.unsplash.com/photo-1502657877623-f66bf489d236?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+
   /* background-size: cover; */
 }
 .dropdown-content {
@@ -26,6 +31,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+<<<<<<< HEAD
+=======
+  /* background-position: center; */
+>>>>>>> master
 }
 .sec1,
 .sec2,
@@ -58,6 +67,6 @@ li {
   margin-top: 10px;
 }
 .material-icons {
-  font-size: 60px;
+  /* font-size: 60px; */
   color: rgb(211, 180, 211);
 }

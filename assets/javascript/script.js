@@ -165,7 +165,7 @@ $(document).ready(function() {
         Authorization: "Bearer " + accessToken
       }
     }).then(function(response) {
-      console.log(response.display_name);
+      console.log(response);
       h3 = $("<h1>");
       h3.text("You are logged in as: " + response.display_name);
       $("#user-info").append(h3);

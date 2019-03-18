@@ -169,6 +169,20 @@ $(document).ready(function() {
       h3.text("You are logged in as: " + response.display_name);
       $("#user-info").append(h3);
     });
+
+    $.ajax({
+      url:
+        "https://api.spotify.com/v1/playlists/" +
+        getLocation(state) +
+        "/images",
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + accessToken
+      }
+    }).then(function(response) {
+      console.log(response);
+      $(".album").attr("src", response);
+    });
     // });
 
     //logs an access token sent from spotfiy

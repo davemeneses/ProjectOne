@@ -153,6 +153,9 @@ $(document).ready(function() {
       h6 = $("<h6>");
       h6.text(response.display_name);
       $("#user-info").append(h6);
+      var followers = $("<h6>");
+      followers.text("Follower Count: " + response.followers.total);
+      $("#user-info").append(followers);
     });
     $.ajax({
       url:

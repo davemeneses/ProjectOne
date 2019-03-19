@@ -6,6 +6,7 @@ font-family: 'Crimson Text', serif; */
   box-sizing: border-box;
   text-align: center;
   font-family: "Libre Franklin", sans-serif;
+  color: white;
 }
 h1 {
   font-family: "Crimson Text", serif;
@@ -24,26 +25,10 @@ h1 {
   color: white;
 }
 body {
-<<<<<<< HEAD
-<<<<<<< HEAD
   background-image: url("../images/Red\ Sunset.jpg");
-=======
-  background-image: url("../images/Background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-.bodyTwo {
-  background-image: url("../images/city\ background\ for\ project.png");
->>>>>>> master
-=======
-  background-image: url("../images/Red\ Sunset.jpg");
->>>>>>> master
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  margin-top: 10%;
-  color: white;
 }
 li {
   border-radius: 15px;
@@ -85,4 +70,8 @@ li {
   display: inline-block;
   margin-right: 3%;
   margin-left: 3%;
+}
+
+#splashPage {
+  margin-top: 20%;
 }

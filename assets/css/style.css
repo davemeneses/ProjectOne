@@ -15,7 +15,7 @@ h1 {
   height: auto;
 }
 .sidenav {
-  background-image: url("https://data.whicdn.com/images/188199737/original.gif");
+  background-image: url("../images/navbar.gif");
 }
 .dropdown-content {
   border-radius: 20px;
@@ -24,7 +24,17 @@ h1 {
   color: white;
 }
 body {
+<<<<<<< HEAD
   background-image: url("../images/Red\ Sunset.jpg");
+=======
+  background-image: url("../images/Background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.bodyTwo {
+  background-image: url("../images/city\ background\ for\ project.png");
+>>>>>>> master
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

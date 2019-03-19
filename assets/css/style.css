@@ -6,6 +6,7 @@ font-family: 'Crimson Text', serif; */
   box-sizing: border-box;
   text-align: center;
   font-family: "Libre Franklin", sans-serif;
+  color: white;
 }
 h1 {
   font-family: "Crimson Text", serif;
@@ -46,9 +47,7 @@ li {
   color: rgb(211, 180, 211);
 }
 #user-info {
-  font-size: 2vh;
-  color: black;
-  background-color: teal;
+  font-size: 4vh;
 }
 #player {
   height: auto;
@@ -59,13 +58,9 @@ li {
   width: 380px;
 }
 
-/* #instructions {
-  font-size: 3vh;
-  opacity: 0.7;
-} */
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
   grid-auto-rows: minmax(200, auto);
 }
@@ -75,4 +70,8 @@ li {
   display: inline-block;
   margin-right: 3%;
   margin-left: 3%;
+}
+
+#splashPage {
+  margin-top: 20%;
 }

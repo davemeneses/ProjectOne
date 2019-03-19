@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Notes of the Neighborhood</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Monoton|News+Cycle|Permanent+Marker|Rock+Salt"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="./assets/javascript/script.js"></script>
+  </head>
+  <body>
+    <!-- Headset Button-->
+    <div class="row">
+      <a href="#" data-target="slide-out" class="sidenav-trigger"
+        ><i class="large material-icons">headset</i></a
+      >
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view">
+            <a href="#email"
+              ><img
+                class="circle"
+                id="img-resize"
+                src="./assets/images/dev-team.jpg"
+                style="width:150px; height:150px;"
+            /></a>
+          </div>
+        </li>
+        <li>
+          <a href="https://github.com/davemeneses/ProjectOne" target="_blank"
+            >Project GitHub Repo</a
+          >
+        </li>
+        <li>
+          <a class="subheader" style="color:white;">Meet The Dev Team</a>
+        </li>
+        <li>
+          <a class="dropdown-trigger btn" href="#" data-target="peter"
+            >Peter Stone</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-trigger btn" href="#" data-target="christine"
+            >Christine Trinh</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-trigger btn" href="#" data-target="dave"
+            >David Meneses</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-trigger btn" href="#" data-target="sam"
+            >Sam Norris</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-trigger btn" href="#" data-target="adam"
+            >Adam Rajchwald</a
+          >
+        </li>
+      </ul>
+      <!-- Dropdown Sidebar -->
+      <ul id="peter" class="dropdown-content">
+        <li>
+          <a
+            class="black-text"
+            href="https://github.com/PeterStone6391"
+            target="_blank"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            class="black-text"
+            href="https://www.instagram.com/theacousticmc/"
+            target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            class="black-text"
+            href="https://www.linkedin.com/in/peter-stone-11657448/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+      <ul id="christine" class="dropdown-content">
+        <li>
+          <a
+            class="black-text"
+            href="https://github.com/christineit"
+            target="_blank"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            class="black-text"
+            href="https://www.linkedin.com/in/christine-i-trinh/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a
+            class="black-text"
+            href="https://soundcloud.com/christine-trinh-1"
+            target="_blank"
+            >Sound Cloud</a
+          >
+        </li>
+        <li>
+          <a
+            class="black-text"
+            href="https://www.instagram.com/christineit/"
+            target="_blank"
+            >Instagram</a
+          >
+        </li>
+      </ul>
+      <ul id="sam" class="dropdown-content">
+        <li><a class="black-text" href="#!">GitHub</a></li>
+        <li><a class="black-text" href="#!">Instagram</a></li>
+        <li><a class="black-text" href="#!">Slack</a></li>
+        <li><a class="black-text" href="#!">Spotify</a></li>
+      </ul>
+      <ul id="dave" class="dropdown-content">
+        <li>
+          <a
+            class="black-text"
+            href="https://github.com/davemeneses"
+            target="_blank"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            class="black-text"
+            href="https://www.instagram.com/davedrinks/"
+            target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            class="black-text"
+            href="https://www.linkedin.com/in/david-meneses-55936b93/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+      <ul id="adam" class="dropdown-content">
+        <li>
+          <a
+            class="black-text"
+            class="linkz"
+            href="https://github.com/adamrajch"
+            target="_blank"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            class="black-text"
+            class="linkz"
+            href="https://www.instagram.com/adimaeus/"
+            target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            class="black-text"
+            class="linkz"
+            href="https://www.crunchyroll.com"
+            target="_blank"
+            >Anime</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="backgroundPanel">
+    <!-- Instructions -->
+    <div class="content">
+      <div class="jumbotron center-align">
+        <h1 class="display-4" id="logo-header">Notes Of The Neighborhood</h1>
+        <div id="instructions" class="container">
+          <p class="lead">
+            Grab a music playlist based on your location. Link your Spotify and
+            start listening now
+          </p>
+          <hr class="my-4" />
+          <p>Smash that spotify button to grab that API boi</p>
+        </div>
+      </div>
+    </div>
+   
+    <!-- Carousel -->
+    <div class="boxcontent container wrapper">
+      <div id="player" class="content-box"></div>
+      <div class="content-box">
+        <img id = "album" src = "">
+      </div>
+      <div id="user-info" class="content-box">Welcome</div>
+    </div>
+  </body>
+</html>

@@ -75,3 +75,9 @@ li {
 #splashPage {
   margin-top: 20%;
 }
+
+@media only screen and (max-width: 640px) {
+  #player {
+    display: none;
+  }
+}

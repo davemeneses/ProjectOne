@@ -169,7 +169,7 @@ $(document).ready(function() {
       console.log("pls work" + images[1]);
       console.log("Specific image url", images[1].url);
       console.log("Specific images", images[1]);
-      $(".album").attr("src", images[1].url);
+      $("#album").attr("src", images[1].url);
     });
     // });
     //logs an access token sent from spotfiy

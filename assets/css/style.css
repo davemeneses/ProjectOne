@@ -77,7 +77,13 @@ li {
 }
 
 @media only screen and (max-width: 640px) {
-  #album {
+  #mediaQTest {
     display: none;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    grid-auto-rows: minmax(200, auto);
   }
 }

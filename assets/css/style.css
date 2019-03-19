@@ -24,7 +24,21 @@ h1 {
   color: white;
 }
 body {
+<<<<<<< HEAD
+<<<<<<< HEAD
   background-image: url("../images/Red\ Sunset.jpg");
+=======
+  background-image: url("../images/Background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.bodyTwo {
+  background-image: url("../images/city\ background\ for\ project.png");
+>>>>>>> master
+=======
+  background-image: url("../images/Red\ Sunset.jpg");
+>>>>>>> master
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -46,9 +60,9 @@ li {
   color: rgb(211, 180, 211);
 }
 #user-info {
-  font-size: 2vh;
-  color: black;
-  background-color: teal;
+  font-size: 3vh;
+  color: white;
+  margin-bottom: 1%;
 }
 #player {
   height: auto;
@@ -59,13 +73,9 @@ li {
   width: 380px;
 }
 
-/* #instructions {
-  font-size: 3vh;
-  opacity: 0.7;
-} */
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
   grid-auto-rows: minmax(200, auto);
 }

@@ -150,9 +150,9 @@ $(document).ready(function() {
       }
     }).then(function(response) {
       console.log(response);
-      h3 = $("<h3>");
-      h3.text(response.display_name);
-      $("#user-info").append(h3);
+      h6 = $("<h6>");
+      h6.text(response.display_name);
+      $("#user-info").append(h6);
     });
     $.ajax({
       url:

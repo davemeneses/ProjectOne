@@ -46,9 +46,9 @@ li {
   color: rgb(211, 180, 211);
 }
 #user-info {
-  font-size: 2vh;
-  color: black;
-  background-color: teal;
+  font-size: 3vh;
+  color: white;
+  margin-bottom: 1%;
 }
 #player {
   height: auto;
@@ -59,13 +59,9 @@ li {
   width: 380px;
 }
 
-/* #instructions {
-  font-size: 3vh;
-  opacity: 0.7;
-} */
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
   grid-auto-rows: minmax(200, auto);
 }

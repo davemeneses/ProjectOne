@@ -180,4 +180,18 @@ $(document).ready(function() {
   });
   var apiURL =
     "https://accounts.spotify.com/authorize?response_type=code&client_id=89925106e2f44201b6be245abb2f7728&scope=playlist-modify-public&redirect_uri=https://davemeneses.github.io/ProjectOne/";
+
+  var playPause = anime({
+    targets: "img.aniBox",
+    translateY: [{ value: 350, duration: 1300 }, { value: 0, duration: 1300 }],
+    rotate: {
+      value: "1turn",
+      easing: "easeInOutSine"
+    },
+    loop: true,
+    delay: function(el, i, l) {
+      return i * 1200;
+    },
+    autoplay: true
+  });
 });

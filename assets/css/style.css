@@ -1,12 +1,14 @@
+/* font-family: 'Work Sans', sans-serif;
+font-family: 'Libre Franklin', sans-serif;
+font-family: 'Crimson Text', serif; */
+
 * {
   box-sizing: border-box;
   text-align: center;
+  font-family: "Libre Franklin", sans-serif;
 }
-p {
-  color: black;
-}
-#logo-header {
-  font-family: "Rock Salt", cursive;
+h1 {
+  font-family: "Crimson Text", serif;
 }
 #img-resize {
   max-width: 100%;
@@ -22,16 +24,12 @@ p {
   color: white;
 }
 body {
-  background-image: url("https://i.pinimg.com/originals/e9/89/61/e9896186f55021eeb4a5f39fea811124.png");
+  background-image: url("../images/Red\ Sunset.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-.bodyTwo {
-  background-image: url("../images/city\ background\ for\ project.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  margin-top: 10%;
+  color: white;
 }
 li {
   border-radius: 15px;
@@ -57,19 +55,20 @@ li {
   width: auto;
 }
 
-h1 {
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: black;
-  -webkit-text-fill-color: gold;
-}
-#instructions {
+/* #instructions {
   font-size: 3vh;
-  background-color: white;
   opacity: 0.7;
-}
+} */
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1em;
   grid-auto-rows: minmax(200, auto);
+}
+.aniBox {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 3%;
+  margin-left: 3%;
 }

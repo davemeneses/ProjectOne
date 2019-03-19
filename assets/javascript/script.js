@@ -151,7 +151,7 @@ $(document).ready(function() {
     }).then(function(response) {
       console.log(response);
       h6 = $("<h6>");
-      h6.text("You are logged in as: " + response.display_name);
+      h6.text(response.display_name);
       $("#user-info").append(h6);
     });
     $.ajax({

@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
-  align-content: center;
+  text-align: center;
+}
+p {
+  color: black;
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: gold; */
 }
 #logo-header {
   font-family: "Rock Salt", cursive;
@@ -18,26 +24,26 @@
 .sidenav li > a {
   color: white;
 }
-.navHeight {
+/* .navHeight {
   height: 800px;
-}
-.dropdown-content {
+} */
+/* .dropdown-content {
   color: black;
-}
+} */
 body {
   background-image: url("https://i.pinimg.com/originals/e9/89/61/e9896186f55021eeb4a5f39fea811124.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
-.sec1,
+/* .sec1,
 .sec2,
 .sec3 {
   background-color: whitesmoke;
   height: 200px;
   text-align: center;
   margin-right: 10px;
-}
+} */
 
 li {
   border-radius: 15px;
@@ -46,42 +52,60 @@ li {
   color: white;
   margin-bottom: 20px;
 }
-.content-box{
-  width:300px;
-  height:200px;
-  /* background-color:teal; */
-  float:left;
-  margin-right:15px;
-  margin-left:15px;
+/* .content-box {
+  width: 300px;
+  height: 200px;
+  float: left;
+  margin-right: 15px;
+  margin-left: 15px;
   text-align: center;
-}
+  float: left;
+  display: inline-block;
+} */
 .album {
   background-image: url("https://www.adorama.com/alc/wp-content/uploads/2018/06/kanye-west-ye-album-cover-825x465.png");
 }
-#spotify-login {
+/* #spotify-login {
   margin-top: 10px;
-}
+} */
 .material-icons {
   /* font-size: 60px; */
   color: rgb(211, 180, 211);
 }
-#user-info{
-  font-size: 10px;
-  height: 200px;
-  width:200px;
-  color:black;
-  background-color:green;
+#user-info {
+  font-size: 2vh;
+  /* height: auto;
+  width: auto; */
+  color: black;
+  background-color: teal;
 }
-#player{
-  height:380px;
-  width:300px;
+#player {
+  height: auto;
+  width: auto;
 }
-.content{
-  margin-left:80px;
+/* .content {
+  margin-left: 80px;
+} */
+/* .boxcontent {
+  margin-left: 10%;
+} */
+/* .carousel {
+  width: 40%;
+} */
+
+h1 {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: gold;
 }
-.boxcontent{
-  margin-left:10%;
+#instructions {
+  font-size: 3vh;
+  background-color: white;
+  opacity: 0.7;
 }
-.carousel{
-  width:40%;
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  grid-auto-rows: minmax(200, auto);
 }

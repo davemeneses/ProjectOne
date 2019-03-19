@@ -29,6 +29,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  margin-top: 10%;
+  color: white;
 }
 li {
   border-radius: 15px;
@@ -45,9 +47,7 @@ li {
   color: rgb(211, 180, 211);
 }
 #user-info {
-  font-size: 3vh;
-  color: white;
-  margin-bottom: 1%;
+  font-size: 4vh;
 }
 #player {
   height: auto;

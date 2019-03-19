@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Notes of the Neighborhood</title>
-
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -17,31 +16,44 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Monoton|News+Cycle|Permanent+Marker|Rock+Salt"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css?family=Crimson+Text|Libre+Franklin|Work+Sans"
       rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script src="./assets/javascript/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
   </head>
-  <body class="bodyTwo">
+  <body>
     <!-- Spotify Login Button -->
-
-    <div class="container ">
-      <div class="row">
+    <div id='animation'>
+            <img class='aniBox'
+              src='http://images.clipartpanda.com/music-note-transparent-background-003371-glossy-black-icon-media-music-eighth-notes.png'>
+            <img class='aniBox'
+              src='http://images.clipartpanda.com/music-note-transparent-background-003371-glossy-black-icon-media-music-eighth-notes.png'>
+            <img class='aniBox'
+              src='http://images.clipartpanda.com/music-note-transparent-background-003371-glossy-black-icon-media-music-eighth-notes.png'>
+            <img class='aniBox'
+              src='http://images.clipartpanda.com/music-note-transparent-background-003371-glossy-black-icon-media-music-eighth-notes.png'>
+            <img class='aniBox'
+              src='http://images.clipartpanda.com/music-note-transparent-background-003371-glossy-black-icon-media-music-eighth-notes.png'>
+            <img class='aniBox'
+              src='http://images.clipartpanda.com/music-note-transparent-background-003371-glossy-black-icon-media-music-eighth-notes.png'>
+            <img class='aniBox'
+              src='http://images.clipartpanda.com/music-note-transparent-background-003371-glossy-black-icon-media-music-eighth-notes.png'>
+            <img class='aniBox'
+              src='http://images.clipartpanda.com/music-note-transparent-background-003371-glossy-black-icon-media-music-eighth-notes.png'>
+    </div>    
+    <div>
+        <div class="row">
         <h1 id="logo-header">Notes Of The Neighborhood</h1>
         <p id="instructions">
-          Welcome to Notes of the Neighborhood! Click the Start Listening to log
-          into Spotify and get a playlist of local artists from your area:
+          
+          Click the Start Listening button to log into Spotify to discover local
+          artists from your area:<br><br>
         </p>
-      </div>
-
-      <div class="row center-align">
+        
         <a
           class="btn btn-primary btn-lg pulse"
           id="spotify-login"
@@ -49,7 +61,6 @@
           role="button"
           >Start Listening</a
         >
-      </div>
     </div>
   </body>
 </html>

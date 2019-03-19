@@ -68,6 +68,10 @@ li {
   height: auto;
   width: auto;
 }
+#album {
+  height: 380px;
+  width: 380px;
+}
 
 /* #instructions {
   font-size: 3vh;

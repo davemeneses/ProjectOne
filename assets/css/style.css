@@ -25,6 +25,7 @@ h1 {
 }
 body {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-image: url("../images/Red\ Sunset.jpg");
 =======
   background-image: url("../images/Background.png");
@@ -34,6 +35,9 @@ body {
 }
 .bodyTwo {
   background-image: url("../images/city\ background\ for\ project.png");
+>>>>>>> master
+=======
+  background-image: url("../images/Red\ Sunset.jpg");
 >>>>>>> master
   background-repeat: no-repeat;
   background-attachment: fixed;

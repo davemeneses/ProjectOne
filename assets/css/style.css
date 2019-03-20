@@ -1,21 +1,22 @@
-/* font-family: 'Work Sans', sans-serif;
-font-family: 'Libre Franklin', sans-serif;
-font-family: 'Crimson Text', serif; */
-
 * {
   box-sizing: border-box;
   text-align: center;
-  font-family: "Libre Franklin", sans-serif;
 }
-h1 {
-  font-family: "Crimson Text", serif;
+p {
+  color: black;
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: gold; */
+}
+#logo-header {
+  font-family: "Rock Salt", cursive;
 }
 #img-resize {
   max-width: 100%;
   height: auto;
 }
 .sidenav {
-  background-image: url("../images/navbar.gif");
+  background-image: url("https://data.whicdn.com/images/188199737/original.gif");
 }
 .dropdown-content {
   border-radius: 20px;
@@ -23,14 +24,27 @@ h1 {
 .sidenav li > a {
   color: white;
 }
+/* .navHeight {
+  height: 800px;
+} */
+/* .dropdown-content {
+  color: black;
+} */
 body {
-  background-image: url("../images/Red\ Sunset.jpg");
+  background-image: url("https://i.pinimg.com/originals/e9/89/61/e9896186f55021eeb4a5f39fea811124.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  margin-top: 10%;
-  color: white;
 }
+/* .sec1,
+.sec2,
+.sec3 {
+  background-color: whitesmoke;
+  height: 200px;
+  text-align: center;
+  margin-right: 10px;
+} */
+
 li {
   border-radius: 15px;
 }
@@ -38,41 +52,59 @@ li {
   color: white;
   margin-bottom: 20px;
 }
+/* .content-box {
+  width: 300px;
+  height: 200px;
+  float: left;
+  margin-right: 15px;
+  margin-left: 15px;
+  text-align: center;
+  float: left;
+  display: inline-block;
+} */
 .album {
   background-image: url("https://www.adorama.com/alc/wp-content/uploads/2018/06/kanye-west-ye-album-cover-825x465.png");
 }
-
+/* #spotify-login {
+  margin-top: 10px;
+} */
 .material-icons {
+  /* font-size: 60px; */
   color: rgb(211, 180, 211);
 }
 #user-info {
   font-size: 2vh;
+  /* height: auto;
+  width: auto; */
   color: black;
-  background-color: teal;
 }
 #player {
   height: auto;
   width: auto;
 }
-#album {
-  height: 380px;
-  width: 380px;
-}
-
-/* #instructions {
-  font-size: 3vh;
-  opacity: 0.7;
+/* .content {
+  margin-left: 80px;
 } */
+/* .boxcontent {
+  margin-left: 10%;
+} */
+/* .carousel {
+  width: 40%;
+} */
+
+h1 {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: gold;
+}
+#instructions {
+  font-size: 3vh;
+  background-color: white;
+  opacity: 0.7;
+}
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1em;
   grid-auto-rows: minmax(200, auto);
-}
-.aniBox {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  margin-right: 3%;
-  margin-left: 3%;
 }
